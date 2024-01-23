@@ -8,8 +8,9 @@ import jwt, { VerifyErrors } from "jsonwebtoken"
 class AuthController{
     public login=catchAsync(async (req:Request, res: Response)=>{
         const err=validationResult(req)
-
+        
         if(!err.isEmpty){
+            console.log("Error")
             return res.status(400).json(err)
         }
 

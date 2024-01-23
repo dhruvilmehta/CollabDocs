@@ -41,7 +41,7 @@ class ShareController{
             text: `Click the following link to view and edit the document : http://localhost:3000/document/${id}`
         }
 
-        await mailService.sendMail(email)
+        // await mailService.sendMail(email)
 
         return res.status(201).json(documentUser)
     })

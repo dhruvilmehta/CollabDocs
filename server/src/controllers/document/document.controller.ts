@@ -42,7 +42,7 @@ class DocumentController{
         const err=validationResult(req)
 
         if(!err.isEmpty()) return res.status(400).json(err)
-
+        
         if(!req.user) return res.sendStatus(401)
 
         const {id}=req.params

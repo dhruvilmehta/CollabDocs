@@ -4,8 +4,8 @@ const transporter=createTransport({
     port: 465,
     host: 'smtp.gmail.com',
     auth:{
-        user: "kuluruvineeth8623@gmail.com",
-        pass: "1234"
+        user: "dhruvilmehta2606@gmail.com",
+        pass: "fhncoqdytgydhcis"
     },
     secure: true
 })

@@ -18,13 +18,17 @@ import { DocumentUser } from "./documentUser.model.js";
 
 @Table({tableName: "user", underscored: true})
 class User extends Model{
-    @Column(DataType.STRING)
+    @Column({
+        type: DataType.STRING,
+        allowNull: false,
+        unique: true
+    })
     email!: string
 
     @Column(DataType.STRING)
     password!: string
 
-    @Column(DataType.BOOLEAN)
+    @Column({type: DataType.BOOLEAN, defaultValue: true})
     isVerified!: boolean
 
     @Column(DataType.STRING)

@@ -7,24 +7,26 @@ import cors from 'cors';
 import errorHandler from './middleware/error-handler.js';
 
 const app: Express=express()
-app.use(express.json())
-app.use(router)
-
 app.use(
     cors({
         origin: "*"
     })
 )
+app.use(express.json())
+app.use(router)
 
 app.use(errorHandler)
 const port=env.PORT
 
 db.sequelize.sync()
 
-app.get("/",(req:Request, res:Response)=>{
-    res.send("Express + Typescript")
-})
+// app.get("/",(req:Request, res:Response)=>{
+//     console.log("Hello")
+//     res.send("Express + Typescript")
+// })
 
-app.listen(port, ()=>{
-    console.log(`Server is running at port ${port}`)
-})
+// app.listen(port, ()=>{
+//     console.log(`Server is running at port ${port}`)
+// })
+
+export default app

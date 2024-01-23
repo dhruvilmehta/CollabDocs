@@ -21,7 +21,7 @@ class UserService{
             verificationToken: verificationToken
         })
         
-        await this.sendVerificationEmail(user)
+        // await this.sendVerificationEmail(user)
     }
 
     private sendVerificationEmail=async(user: User)=>{
@@ -146,9 +146,7 @@ class UserService{
 
     public updateIsVerified= async(user: User, isVerified: boolean)=>{
         await user.update({
-            where:{
-                isVerified
-            }
+            isVerified
         })
     }
 }
