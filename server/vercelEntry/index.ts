@@ -1,9 +1,9 @@
 import http from "http";
 import { Server } from "socket.io";
-import app from "../index";
+import app from "../src/index";
 import jwt, { VerifyErrors } from "jsonwebtoken";
-import documentService from "../services/document.service";
-import SocketEvent from "../types/enums/socket-events.enum";
+import documentService from "../src/services/document.service";
+import SocketEvent from "../src/types/enums/socket-events.enum";
 
 const port = 8080;
 const server = http.createServer(app);
